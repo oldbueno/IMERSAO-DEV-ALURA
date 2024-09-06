@@ -26,8 +26,27 @@
         <p>Desenvolvido por Luciano Bueno</p>
         <p>Todos Direitos Reservados</p>
     </footer>
+    <script>
+        const campoPesquisa = document.getElementById('campo-pesquisa');
+
+campoPesquisa.addEventListener('keypress', function(event) {
+  // Verifica se a tecla pressionada foi Enter (código 13)
+  if (event.keyCode === 13) {
+    // Chame a função que contém a lógica que você deseja executar
+    pesquisar(); // Exemplo de função
+  }
+});
+
+// Função para buscar o jogador 
+function pesquisar() {
+  const nomeJogador = campoPesquisa.value;
+  console.log('Você digitou:', nomeJogador);
+  // Aqui você colocaria a lógica para buscar o jogador, como uma requisição AJAX
+}
+    </script>
     <script src="dados.js"></script>
     <script src="app.js"></script>
+
 </body>
 
 </html>
